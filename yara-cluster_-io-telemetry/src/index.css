@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-dark: #020408;
+  --bg-panel: rgba(10, 15, 25, 0.85);
+  --accent-cyan: #00f2ff;
+  --accent-amber: #ff9d00;
+  --accent-red: #ff3c3c;
+  --text-dim: #8a9cb0;
+  --border-primary: rgba(0, 242, 255, 0.2);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #e0e6ed;
+}
+
+/* Global Scanline Effect */
+.scanlines::before {
+  content: " ";
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.15;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.9; }
+  15% { opacity: 0.95; }
+  25% { opacity: 0.98; }
+  30% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.flicker {
+  animation: flicker 0.1s infinite;
+}

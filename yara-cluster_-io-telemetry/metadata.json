@@ -1,0 +1,6 @@
+{
+  "name": "Yara Cluster: IO Telemetry",
+  "description": "Universal AI (IO) Planetary Telemetry Interface for the Yara Cluster series. Generates visual planetary renders and real-time stratification reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI_POWERED"]
+}
